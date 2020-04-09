@@ -43,6 +43,7 @@ var queryType = new GraphQLObjectType({
                     if (!logos) {
                         throw new Error('Error')
                     }
+                    // returns all the logos
                     return logos
                 }
             },
@@ -70,6 +71,7 @@ var mutation = new GraphQLObjectType({
     name: 'Mutation',
     fields: function () {
         return {
+            // adds a logo
             addLogo: {
                 type: logoType,
                 args: {
@@ -92,6 +94,7 @@ var mutation = new GraphQLObjectType({
                     return newLogo
                 }
             },
+            // updates logos
             updateLogo: {
                 type: logoType,
                 args: {
@@ -115,6 +118,7 @@ var mutation = new GraphQLObjectType({
                     });
                 }
             },
+            // deleting the logos
             removeLogo: {
                 type: logoType,
                 args: {
