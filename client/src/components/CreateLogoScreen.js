@@ -32,29 +32,29 @@ const ADD_LOGO = gql`
     }
 `;
 
-const GET_LOGO = gql`
-    query logo($logoId: String) {
-        logo(id: $logoId) {
-            _id
-            text
-            color
-            fontSize
-            borderRadius
-            backgroundColor
-            borderColor
-            padding
-            margin
-        }
-    }
-`;
+// const GET_LOGO = gql`
+//     query logo($logoId: String) {
+//         logo(id: $logoId) {
+//             _id
+//             text
+//             color
+//             fontSize
+//             borderRadius
+//             backgroundColor
+//             borderColor
+//             padding
+//             margin
+//         }
+//     }
+// `;
 
 class CreateLogoScreen extends Component {
 
     render() {
         let text, color, fontSize, borderRadius, backgroundColor, borderColor, padding, margin;
         return (
-            <div className="row">
-                <div className="container col">
+            // <div className="row">
+                // <div className="container col">
                     <Mutation mutation={ADD_LOGO} onCompleted={() => this.props.history.push('/')}>
                         {(addLogo, { loading, error }) => (
                             <div className="container">
@@ -94,13 +94,13 @@ class CreateLogoScreen extends Component {
                                                 <label htmlFor="fontSize">Font Size:</label>
                                                 <input type="number" className="form-control" name="fontSize" ref={node => {
                                                     fontSize = node;
-                                                }} placeholder="Font Size" defaultValue={"15pt"}/>
+                                                }} placeholder="Font Size" defaultValue={15}/>
                                             </div>
                                             <div className="form-group">
                                                 <label htmlFor="borderRadius">Border Radius:</label>
                                                 <input type="number" className="form-control" name="borderRadius" ref={node => {
                                                     borderRadius = node;
-                                                }} placeholder="Border Radius" defaultValue={"#ffffff"}/>
+                                                }} placeholder="Border Radius" defaultValue={12}/>
                                             </div>
 
 
@@ -119,18 +119,16 @@ class CreateLogoScreen extends Component {
                                             </div>
                                             <div className="form-group">
                                                 <label htmlFor="padding">Padding:</label>
-                                                <input type="text" className="form-control" name="padding" ref={node => {
+                                                <input type="number" className="form-control" name="padding" ref={node => {
                                                     padding = node;
-                                                }} placeholder="Padding" defaultValue={"10pt"} />
+                                                }} placeholder="Padding" defaultValue={15} />
                                             </div>
                                             <div className="form-group">
                                                 <label htmlFor="margin">Margin:</label>
-                                                <input type="text" className="form-control" name="margin" ref={node => {
+                                                <input type="number" className="form-control" name="margin" ref={node => {
                                                     margin = node;
-                                                }} placeholder="Margin" defaultValue={"10px"} />
+                                                }} placeholder="Margin" defaultValue={15} />
                                             </div>
-
-
                                             <button type="submit" className="btn btn-success">Submit</button>
                                         </form>
                                         {loading && <p>Loading...</p>}
@@ -140,20 +138,7 @@ class CreateLogoScreen extends Component {
                             </div>
                         )}
                     </Mutation>
-                </div>
-                <div className = "container col">
-                    {/* <Query query={GET_LOGO} variables={{ logoId: this.props.match.params.id }}>
-                    {({ loading, error, data }) => {
-                        if (loading) return 'Loading...';
-                        if (error) return `Error! ${error.message}`;
-                        return(
-                            <TextEditWorkspace logo={data.logo}/>
-
-                        )
-                    }}
-                    </Query> */}
-                </div>
-            </div>
+                
         );
     }
 }
