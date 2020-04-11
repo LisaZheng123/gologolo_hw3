@@ -18,6 +18,7 @@ const GET_LOGO = gql`
             borderColor
             padding
             margin
+            borderThickness
         }
     }
 `;
@@ -60,7 +61,6 @@ class ViewLogoScreen extends Component {
                                                 <dd>{data.logo.fontSize}</dd>
                                                 <dt>Border Radius</dt>
                                                 <dd>{data.logo.borderRadius}</dd>
-
                                                 <dt>background Color</dt>
                                                 <dd>{data.logo.backgroundColor}</dd>
                                                 <dt>Border Color</dt>
@@ -69,7 +69,8 @@ class ViewLogoScreen extends Component {
                                                 <dd>{data.logo.padding}</dd>
                                                 <dt>Margin</dt>
                                                 <dd>{data.logo.margin}</dd>
-
+                                                <dt>Border Thickness</dt>
+                                                <dd>{data.logo.borderThickness}</dd>
                                                 <dt>Last Updated:</dt>
                                                 <dd>{data.logo.lastUpdate}</dd>
                                             </dl>
