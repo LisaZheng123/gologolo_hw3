@@ -22,11 +22,19 @@ class HomeScreen extends Component {
                 {({ loading, error, data }) => {
                     if (loading) return 'Loading...';
                     if (error) return `Error! ${error.message}`;
-
+                    
+                    // sorts by lastUpdate
+                    data.logos.sort(function(a, b){return new Date(b.lastUpdate) - new Date(a.lastUpdate)});
+                    
                     return (
                         <div className="container row">
                             <div className="col s4">
                                 <h3>Recent Work</h3>
+
+
+                                
+                                
+                                
                                 {data.logos.map((logo, index) => (
                                     <div key={index} className='home_logo_link'
                                         style={{ cursor: "pointer" }}>
