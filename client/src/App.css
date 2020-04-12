@@ -17,7 +17,7 @@ body {
   /* background-color: var(--swatch-foundation); */
   background-image: url("https://thumbs.gfycat.com/CorruptAcclaimedBorzoi-max-1mb.gif");/*linear-gradient(#26baee, #9fe8fa);*/
   font-family: 'Comic Sans MS';
-  color: rgb(230, 124, 142);
+  color: black;
 }
 
 #home_banner_container {
@@ -39,4 +39,8 @@ body {
   border-style: dashed;
   border-color: pink;
   padding: 10px;
+}
+
+a{
+  color:hotpink;
 }

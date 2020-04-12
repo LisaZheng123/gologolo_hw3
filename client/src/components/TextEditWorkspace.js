@@ -14,13 +14,15 @@ class TextEditWorkspace extends Component {
                 margin: this.props.logo.margin + "px",
                 width: "max-content",
                 borderRadius: this.props.logo.borderRadius + "px",
-                borderWidth: this.props.logo.borderThickness + "px"
+                borderWidth: this.props.logo.borderThickness + "px",
             }
         }
         return (
             <div className="col s8">
-                <div style={ styles.container }>
-                   {this.props.logo.text}
+                <div style={ styles.container } >
+                    <pre>
+                        {this.props.logo.text}
+                   </pre>
                 </div>
             </div>
         )

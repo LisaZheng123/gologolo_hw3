@@ -55,7 +55,7 @@ class ViewLogoScreen extends Component {
                                         <div id="viewBodydiv" className="panel-body">
                                             <dl>
                                                 <dt>Text:</dt>
-                                                <dd>{data.logo.text}</dd>
+                                                <pre><dd>{data.logo.text}</dd></pre>
                                                 <dt>Color:</dt>
                                                 <dd>{data.logo.color}</dd>
                                                 <dt>Font Size:</dt>

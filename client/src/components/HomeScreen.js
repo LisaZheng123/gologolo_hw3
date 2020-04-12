@@ -32,12 +32,14 @@ class HomeScreen extends Component {
                             </div>
                             <div className="col s3">
                                 <h3>Recent Work</h3>
-                                {data.logos.map((logo, index) => (
-                                    <div key={index} className='home_logo_link'
-                                        style={{ cursor: "pointer" }}>
-                                        <Link to={`/view/${logo._id}`}>{logo.text}</Link>
-                                    </div>
-                                ))}
+                                <pre>
+                                    {data.logos.map((logo, index) => (
+                                        <div key={index} className='home_logo_link'
+                                            style={{ cursor: "pointer" }}>
+                                            <Link to={`/view/${logo._id}`}>{logo.text}</Link>
+                                        </div>
+                                    ))}
+                                </pre>
                             </div>
                             
                             <div className="col s8">

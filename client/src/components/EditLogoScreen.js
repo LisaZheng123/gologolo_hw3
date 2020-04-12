@@ -148,7 +148,7 @@ class EditLogoScreen extends Component {
                                                     }}>
                                                         <div className="form-group">
                                                             <label htmlFor="text">Text:</label>
-                                                            <input type="text" className="form-control" name="text" onChange={this.handleTextChange} ref={node => {
+                                                            <input type="text" required pattern=".*\S+.*" title="This field is required" className="form-control" name="text" onChange={this.handleTextChange} ref={node => {
                                                                 text = node;
                                                             }} placeholder="Text" defaultValue={this.state.flag ? data.logo.text : this.state.text} />
                                                         </div>
@@ -160,13 +160,13 @@ class EditLogoScreen extends Component {
                                                         </div>
                                                         <div className="form-group">
                                                             <label htmlFor="fontSize">Font Size:</label>
-                                                            <input type="number" className="form-control" name="fontSize" onChange={this.handleFontSizeChange} ref={node => {
+                                                            <input type="number" min="2" max="144" oninput="validity.valid||(value='');" className="form-control" name="fontSize" onChange={this.handleFontSizeChange} ref={node => {
                                                                 fontSize = node;
                                                             }} placeholder="Font Size" defaultValue={this.state.flag ? data.logo.fontSize : this.state.fontSize} />
                                                         </div>
                                                         <div className="form-group">
                                                             <label htmlFor="borderRadius">Border Radius:</label>
-                                                            <input type="number" className="form-control" name="borderRadius" onChange={this.handleBorderRadiusChange} ref={node => {
+                                                            <input type="number" min="2" max="144" oninput="validity.valid||(value='');" className="form-control" name="borderRadius" onChange={this.handleBorderRadiusChange} ref={node => {
                                                                 borderRadius = node;
                                                             }} placeholder="Border Radius" defaultValue={this.state.flag ? data.logo.borderRadius : this.state.borderRadius} />
                                                         </div>
@@ -184,19 +184,19 @@ class EditLogoScreen extends Component {
                                                         </div>
                                                         <div className="form-group">
                                                             <label htmlFor="borderThickness">Border Thickness:</label>
-                                                            <input type="number" className="form-control" name="borderThickness" onChange={this.handleBorderThicknessChange} ref={node => {
+                                                            <input type="number" min="2" max="144" oninput="validity.valid||(value='');" className="form-control" name="borderThickness" onChange={this.handleBorderThicknessChange} ref={node => {
                                                                 borderThickness = node;
                                                             }} placeholder="Border Thickness" defaultValue={this.state.flag ? data.logo.borderThickness : this.state.borderThickness} />
                                                         </div>
                                                         <div className="form-group">
                                                             <label htmlFor="padding">Padding:</label>
-                                                            <input type="number" className="form-control" name="padding" onChange={this.handlePaddingSizeChange} ref={node => {
+                                                            <input type="number" min="2" max="144" oninput="validity.valid||(value='');" className="form-control" name="padding" onChange={this.handlePaddingSizeChange} ref={node => {
                                                                 padding = node;
                                                             }} placeholder="Padding" defaultValue={this.state.flag ? data.logo.padding : this.state.padding} />
                                                         </div>
                                                         <div className="form-group">
                                                             <label htmlFor="margin">Margin:</label>
-                                                            <input type="number" className="form-control" name="margin" onChange={this.handleMarginSizeChange} ref={node => {
+                                                            <input type="number" min="2" max="144" oninput="validity.valid||(value='');" className="form-control" name="margin" onChange={this.handleMarginSizeChange} ref={node => {
                                                                 margin = node;
                                                             }} placeholder="Margin" defaultValue={this.state.flag ? data.logo.margin : this.state.margin} />
                                                         </div>
