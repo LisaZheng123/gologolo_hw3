@@ -119,7 +119,7 @@ class CreateLogoScreen extends Component {
                                         }}>
                                             <div className="form-group">
                                                 <label htmlFor="text">Text:</label>
-                                                <input type="text" required pattern=".*\S+.*" title="This field is required" className="form-control" name="text" onChange={this.handleTextChange} ref={node => {
+                                                <input type="text" required pattern=".*\S+.*" title="This field is required and can't be all whitespaces." className="form-control" name="text" onChange={this.handleTextChange} ref={node => {
                                                     text = node;
                                                 }} placeholder="Text" defaultValue={this.state.text}/>
                                             </div>
