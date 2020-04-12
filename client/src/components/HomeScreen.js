@@ -28,13 +28,10 @@ class HomeScreen extends Component {
                     
                     return (
                         <div className="container row">
-                            <div className="col s4">
+                            <div className="col s1">
+                            </div>
+                            <div className="col s3">
                                 <h3>Recent Work</h3>
-
-
-                                
-                                
-                                
                                 {data.logos.map((logo, index) => (
                                     <div key={index} className='home_logo_link'
                                         style={{ cursor: "pointer" }}>
@@ -42,6 +39,7 @@ class HomeScreen extends Component {
                                     </div>
                                 ))}
                             </div>
+                            
                             <div className="col s8">
                                 <div id="home_banner_container">
                                     @todo<br />

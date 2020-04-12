@@ -140,7 +140,7 @@ class EditLogoScreen extends Component {
                                             </h3>
                                         </div>
                                         <div className = "row">
-                                            <div className = "container col">
+                                            <div id="viewBodydiv" className = "container col">
                                                 <div className="panel-body">                                            
                                                     <form onSubmit={e => {
                                                         e.preventDefault();

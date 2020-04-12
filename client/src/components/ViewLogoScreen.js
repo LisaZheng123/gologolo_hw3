@@ -41,8 +41,9 @@ class ViewLogoScreen extends Component {
                     if (error) return `Error! ${error.message}`;
 
                     return (
-                        <div className="row">
-                            <div className="container col">
+                        <div className="container row">
+                            <div className="col s1"></div>
+                            <div className="col s3">
                                 <div className="container">
                                     <div className="panel panel-default">
                                         <div className="panel-heading">
@@ -51,7 +52,7 @@ class ViewLogoScreen extends Component {
                                                 View Logo
                                             </h3>
                                         </div>
-                                        <div className="panel-body">
+                                        <div id="viewBodydiv" className="panel-body">
                                             <dl>
                                                 <dt>Text:</dt>
                                                 <dd>{data.logo.text}</dd>
@@ -59,17 +60,17 @@ class ViewLogoScreen extends Component {
                                                 <dd>{data.logo.color}</dd>
                                                 <dt>Font Size:</dt>
                                                 <dd>{data.logo.fontSize}</dd>
-                                                <dt>Border Radius</dt>
+                                                <dt>Border Radius:</dt>
                                                 <dd>{data.logo.borderRadius}</dd>
-                                                <dt>background Color</dt>
+                                                <dt>Background Color:</dt>
                                                 <dd>{data.logo.backgroundColor}</dd>
-                                                <dt>Border Color</dt>
+                                                <dt>Border Color:</dt>
                                                 <dd>{data.logo.borderColor}</dd>
-                                                <dt>Padding</dt>
+                                                <dt>Padding:</dt>
                                                 <dd>{data.logo.padding}</dd>
-                                                <dt>Margin</dt>
+                                                <dt>Margin:</dt>
                                                 <dd>{data.logo.margin}</dd>
-                                                <dt>Border Thickness</dt>
+                                                <dt>Border Thickness:</dt>
                                                 <dd>{data.logo.borderThickness}</dd>
                                                 <dt>Last Updated:</dt>
                                                 <dd>{data.logo.lastUpdate}</dd>
@@ -94,7 +95,7 @@ class ViewLogoScreen extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className = "container col">
+                            <div className = "col s8">
                                 <TextEditWorkspace logo={data.logo} />
                             </div>
                         </div>
